@@ -14,7 +14,8 @@ lazy val sodatime = crossProject.in(file(".")).
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.11.7",
     organization := "org.mdedetrich",
-    crossScalaVersions := Seq(scala211Version,scala210Version)
+    crossScalaVersions := Seq(scala211Version,scala210Version),
+    libraryDependencies ++= Seq("org.scalatest" %%% "scalatest" % "3.0.0-M7" % "test")
   ).
   jvmSettings(
     // Add JVM-specific settings here
